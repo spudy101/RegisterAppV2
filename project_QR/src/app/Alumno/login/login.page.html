@@ -1,0 +1,55 @@
+<ion-content>
+
+  <div class="body">
+
+    <div class="contenedor1"></div>
+
+    <div class="contenedor2">
+      <div class="titulo">
+        <ion-label>Login</ion-label>
+      </div>
+
+      <div class="login">
+
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input [(ngModel)]="credenciales.correo" type="text" required></ion-input>
+        </ion-item>
+
+
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input [(ngModel)]="credenciales.contrasena" type="password" required></ion-input>
+        </ion-item>
+      </div>
+
+      <div class="cosas">
+        <div class="correcto">
+          <ion-button (click)="mover2()">
+            Iniciar sesion
+          </ion-button>
+        </div>
+      </div>
+
+
+      <ion-row class="registro">
+        <ion-col size="12" class="" [routerLink]="['/registrarse']">
+          <div class="texto">
+            <ion-label>No tienes cuenta?</ion-label>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <div class="espacio">
+
+      </div>
+
+      <div class="espacio2">
+
+      </div>
+    </div>
+
+  </div>
+
+
+</ion-content>

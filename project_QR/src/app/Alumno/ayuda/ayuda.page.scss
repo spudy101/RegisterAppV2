@@ -1,0 +1,85 @@
+.body {
+    background: linear-gradient(to right, rgba(211, 11, 168, 0.452), rgb(255, 0, 179));
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+.contenedor1 {
+    padding: 20px;
+    width: 100%;
+    padding-top: 25px;
+    justify-content: space-between;
+
+}
+
+.subtitulo {
+    font-size: 18px;
+    color: white;
+    font-weight: 400;
+}
+
+.titulo {
+    font-size: 24px;
+    color: white;
+    font-weight: 600;
+    display: block;
+    margin-top: 5px;
+}
+
+.imagen {
+    float: right;
+    width: 100px;
+    margin-bottom: 1em;
+    z-index: 1;
+    width: 30%;
+}
+
+.contenedor2 {
+    background: white;
+    width: 100%;
+    border-top-right-radius: 50px;
+    padding-top: 20px;
+    text-align: center;
+
+}
+
+.contenedor2 .label {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.parrafo {
+    width: 90%;
+    margin-left: 1em;
+    margin-top: 2em;
+}
+
+.parrafo .label {
+    font-size: 22px;
+    font-weight: 600;
+    color: black;
+}
+
+.parrafo p {
+    font-size: 15px;
+    font-weight: 400;
+    color: black;
+}
+
+mat-card{
+    margin-bottom: 1em;
+}
+
+.espacio {
+    height: 60px;
+}
+
+.espacio2 {
+    padding: 30%;
+    background: linear-gradient(to right, rgba(211, 11, 168, 0.452), rgb(255, 0, 179));
+}

@@ -1,0 +1,73 @@
+<ion-content [fullscreen]="true">
+
+  <div class="bienbenida">
+    <img src="assets/icon/fotoInicio.png" class="" alt="..." style="width: 100%;">
+    <div class="menu">
+      <ion-label (click)="openMenu()">Menu</ion-label>
+      <ion-label [routerLink]="['/ayuda2']">Acerca de Nosotros</ion-label>
+      <ion-label [routerLink]="['/login-p']" (click)="salir()">Cerrar Sesion</ion-label>
+    </div>
+    <div class="texto">
+      <h5 class="titulo">
+        Bienvenido {{nuevoProfesor.nombre}} {{ nuevoProfesor.apellido }} a RegistrAPP
+      </h5>
+      <p>
+        Seleccione la seccion de su clase actual para generar el codigo QR pertinente,
+        luego de estos los estudiantes deberan escanearlo con sus celulares, lo cual los hara quedar presente de
+        manera
+        automatica.
+      </p>
+      <p class="importante">""IMPORTANTE... El QR desaparecera 60 segundos despues de a ver aparecido.""</p>
+    </div>
+
+  </div>
+
+  <div class="tituloQR">
+    <h1>Seleccione un curso para crear una nueva lista...</h1>
+  </div>
+
+  <div class="confirmar">
+    <div class="seleccion">
+
+      <mat-form-field appearance="fill" class="cursos">
+        <mat-label>Seleccione un curso</mat-label>
+        <mat-select [(value)]="selected" [(ngModel)]="nuevoLista.curso">
+          <mat-option>None</mat-option>
+          <div class="filtro" *ngFor="let curso of curso">
+            <mat-option value="{{ curso.id }}" *ngIf="curso.profesorCargo == uid">{{ curso.nombre }}</mat-option>
+          </div>
+        </mat-select>
+      </mat-form-field>
+
+      <p>Id del curso seleccionado: {{selected}}</p>
+
+    </div>
+
+    <div class="botones">
+      <ion-button class="boton" (click)="presentAlert()" expand="block" fill="clear" shape="round">
+        Generar QR
+      </ion-button>
+
+      <ion-button class="boton" expand="block" fill="clear" shape="round" [routerLink]="['/alumnos2/', idLista]">
+        Ver ultima asistencia generada
+      </ion-button>
+    </div>
+  </div>
+
+  <div class="generar_qr">
+
+    <h5>{{ handlerMessage }}</h5>
+
+    <ion-card-content class="QR">
+      <qrcode class="qrActivo" [qrdata]="myAngularxQrCode" [width]="350" [errorCorrectionLevel]="'M'"></qrcode>
+    </ion-card-content>
+
+  </div>
+
+
+  <div class="espacio">
+
+  </div>
+
+
+</ion-content>

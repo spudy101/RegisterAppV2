@@ -1,0 +1,79 @@
+<ion-content [fullscreen]="true">
+
+  <ion-content [fullscreen]="true">
+
+    <div class="bienbenida">
+      <img src="assets/icon/fotoInicio.png" class="" alt="..." style="width: 100%;">
+      <div class="menu">
+        <ion-label (click)="openMenu()">Menu</ion-label>
+        <ion-label [routerLink]="['/generar-qr']">Ir al Inicio</ion-label>
+        <ion-label [routerLink]="['/login-p']" (click)="salir()">Cerrar Sesion</ion-label>
+      </div>
+      <div class="texto">
+        <h5 class="titulo">
+          Resuelve tus dudas...
+        </h5>
+        <p>
+          En esta seccion podras aprender mas sobre RegisterApp, y a su vez conocer a los creadores, y probablemente contactarlos, si es que puedes
+        </p>
+        <p class="importante">""IMPORTANTE... Sabias que las ballenas mueren por su peso""</p>
+      </div>
+
+    </div>
+
+    <div class="tituloAyuda">
+    <h1>Informacion util para ti...</h1>
+    <div class="foto">
+      <img src="assets\icon\info.png" alt="">
+    </div>
+  </div>
+
+    <div class="contenedor">
+      <div class="isquierda">
+        <div class="parrafo">
+          <h5>
+            ¿ Qué hacer en caso de problemas ?
+          </h5>
+          <p>
+            Pongase en contacto con su docente para que el pueda hablar con los cordinadores de tu carrera y
+            poder solucionar el problema de la forma mas rapida y efectiva posible <br> <br>
+            Antes cualquier conflicto puede contactarse con +569 6240 8060
+          </p>
+        </div>
+      </div>
+
+      <div class="medio">
+        <div class="parrafo">
+          <h5>
+            ¿Puedo cambiar mi correo o usuario?
+          </h5>
+          <p>
+            La respuesta es si, pero el correo no, ya que este es dado por la institucion y
+            no puede ser cambiado si no es por ellos, pero el usuario y contraseña si, y esto se hace llendo a 
+            configuracion y simplemente cambiarlo a al usuario o contraseña que mas guste
+          </p>
+        </div>
+      </div>
+
+      <div class="derecha">
+        <div class="parrafo">
+          <h5>
+            ¿Que funciones posee RegistrAPP?
+          </h5>
+          <p>
+            Check asist tiene la capacidad de crear un codigo QR, el cual sera creado por tu docente.
+            Este QR tu podras escanearlo y asi poder quedar presente en tu clase de manera mas rapida y efciente<br>
+            <br>
+            Ademas puedes administrar tus cursos y modificar asistencias como sea requerido por su docente
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="espacio">
+
+    </div>
+
+
+  </ion-content>

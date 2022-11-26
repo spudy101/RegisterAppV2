@@ -1,0 +1,63 @@
+<ion-header [translucent]="true" class="ion-no-border">
+
+  <mat-toolbar style="background: rgb(27, 27, 27); color: pink;">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon (click)="openMenu()">menu</mat-icon>
+    </button>
+    <span>
+      RegistrAPP</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon [routerLink]="['/listar-profesores']">home</mat-icon>
+    </button>
+  </mat-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>{{ subtitulo }}</ion-card-subtitle>
+      <ion-card-title>{{ titulo }}</ion-card-title>
+    </ion-card-header>
+
+  </ion-card>
+
+  <ion-card>
+
+    <div class="nombre">
+      <mat-form-field appearance="fill">
+        <mat-label>Titulo</mat-label>
+        <input matInput [(ngModel)]="nuevoCurso.titulo" placeholder="titulo" required>
+      </mat-form-field>
+
+
+      <mat-form-field appearance="fill">
+        <mat-label>Nombre</mat-label>
+        <input matInput [(ngModel)]="nuevoCurso.nombre" placeholder="nombre" required>
+      </mat-form-field>
+    </div>
+
+    <div class="profesor">
+      <mat-form-field appearance="fill">
+        <mat-label>Profesor a cargo</mat-label>
+        <mat-select [(ngModel)]="nuevoCurso.profesorCargo">
+          <mat-option value="{{ profesor.id }}" *ngFor="let profesor of profesor">
+            {{ profesor.nombre }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <ion-card-content>
+      <ion-button [routerLink]="['/listar-cursos/']" class="volver">
+        Volver
+      </ion-button>
+
+      <ion-button (click)="agregarCurso()" class="guardar">
+        Guardar
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

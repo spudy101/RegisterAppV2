@@ -1,0 +1,78 @@
+<ion-header [translucent]="true" class="ion-no-border">
+
+  <mat-toolbar style="background: rgb(27, 27, 27); color: pink;">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon (click)="openFirst()" >menu</mat-icon>
+    </button>
+    <span>
+      RegistrAPP</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon [routerLink]="['/home']">home</mat-icon>
+    </button>
+  </mat-toolbar>
+
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="body">
+
+
+    <div class="contenedor1">
+
+      <div class="usuario">
+        <ion-label class="Bienvenido">Cuenta de </ion-label>
+        <ion-label class="nombre">Camilo Santander</ion-label>
+      </div>
+    </div>
+
+    <div class="contenedor2">
+      <ion-label class="label">Modifique su perfil aqui..</ion-label>
+
+      <div class="contra_actual">
+
+        <div class="imagen">
+          <img src="assets\icon\perfilC.png" alt="">
+        </div>
+
+        <ion-label class="titulo">Correo actual: " {{ nuevoAlumno.correo }} "</ion-label>
+        <ion-label class="titulo">Contraseña actual: " {{ nuevoAlumno.contrasena }} "</ion-label>
+        <ion-label class="titulo">usuario actual: " {{ nuevoAlumno.nombre }} {{ nuevoAlumno.apellido }} "</ion-label>
+
+      </div>
+
+      <div class="cambiar_contra">
+
+        <ion-label class="titulo">Cambiar Nombre</ion-label>
+
+        <ion-input type="text" [(ngModel)]="amodificarAlumno.nombre" placeholder="Nuevo Usuario"></ion-input>
+
+        <ion-button (click)="Cambiarnombre()" expand="block" fill="clear" shape="round">
+          Guardar
+        </ion-button>
+      </div>
+
+      <div class="cambiar_usuario">
+
+        <ion-label class="titulo">Cambiar Apellido</ion-label>
+
+        <ion-input type="text" [(ngModel)]="amodificarAlumno.apellido" placeholder="Nuevo Apellido"></ion-input>
+
+        <ion-button (click)="cambiarApellido()" expand="block" fill="clear" shape="round">
+          Guardar
+        </ion-button>
+      </div>
+
+      <div class="espacio">
+
+      </div>
+      <div class="espacio2">
+
+      </div>
+
+    </div>
+
+  </div>
+
+</ion-content>

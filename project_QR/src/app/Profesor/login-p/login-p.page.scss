@@ -1,0 +1,61 @@
+.todo{
+    transform: translateY(-20%);
+  }
+
+ion-item{
+    width: 98%;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.login{
+    box-shadow: 2px 2px 4px 1px rgb(165, 165, 165);
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    width: 70%;
+}
+
+.titulo{
+    margin-left: 30%;
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+
+
+.registro{
+    width: 30%;
+    box-shadow: 2px 2px 4px 1px rgb(165, 165, 165);
+    border-top-right-radius: 60px;
+    border-bottom-right-radius: 60px;
+    margin-right: 3em;
+    cursor: pointer;
+    height: 50px;
+    text-align: center;
+    padding-top: 10px;
+    font-weight: 800;
+    margin-bottom: 3em;
+    color: orangered;
+}
+
+
+.cosas{
+    display: flex;
+    margin-top: 1em;
+}
+
+.olvidar{
+    color: gray;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 1em;
+    margin-left: 5%;
+    margin-bottom: 6em;
+}
+
+.correcto{
+    width: 20%;
+    margin-left: 35%;
+    margin-top: 10px;
+}
+

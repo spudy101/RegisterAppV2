@@ -1,0 +1,67 @@
+<ion-content>
+
+  <div class="bienbenida">
+    <img src="assets/icon/fotoInicio.png" class="" alt="..." style="width: 100%;">
+    <div class="menu">
+      <ion-label [routerLink]="['/listar-profesores']">Profesores</ion-label>
+      <ion-label [routerLink]="['/listar-cursos']">Cursos</ion-label>
+      <ion-label [routerLink]="['/listar-alumnos']">Alumnos</ion-label>
+      <ion-label [routerLink]="['/login-a']" (click)="salir()">Cerrar Sesion</ion-label>
+    </div>
+    <div class="texto">
+      <h5 class="titulo">
+        Bienvenido administrador a RegistrAPP
+      </h5>
+      <p>
+        Aqui podra generar, eliminar, modificar y ver las distintas colecciones de la base de datos, las cuales 
+        en este caso son profesores, alumnos y cursos (mas adelante generar mallas).
+      </p>
+      <p class="importante">""IMPORTANTE... No puede modificar el correo del profesor una vez creado, debe avisarsele a cordincion""</p>
+    </div>
+
+  </div>
+
+  <div class="container mt-4">
+    <div class="card">
+      <div class="card-body">
+        <h5>Listado de cursos</h5>
+        <h4 style="margin-top: 30px;" *ngIf="curso.length == 0">No hay datos para mostrar</h4>
+        <table *ngIf="curso.length > 0" class="table table-striped mt-5">
+          <thead>
+            <tr>
+              <th>titulo</th>
+              <th>nombre</th>
+              <th>profesor a cargo</th>
+              <th>cantidad alumnos</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let curso of curso">
+              <td>{{ curso.titulo }}</td>
+              <td>{{ curso.nombre }}</td>
+              <td>{{ curso.profesorCargo }}</td>
+              <td>{{ curso.cantidadAlumnos }}</td>
+              <td>
+
+                <mat-icon class="iconos" [routerLink]="['/editar-curso/', curso.id]">open_in_new</mat-icon>
+                <mat-icon class="iconos" (click)="eliminarCurso(curso.id)">delete</mat-icon>
+
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><ion-button  class="agregar" mat-flat-button color="primary" [routerLink]="['/formulario-curso/']">Agregar curso</ion-button></td>
+            </tr>
+          </tbody>
+
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+</ion-content>

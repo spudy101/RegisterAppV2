@@ -1,0 +1,72 @@
+<ion-header [translucent]="true" class="ion-no-border">
+
+  <mat-toolbar style="background: rgb(27, 27, 27); color: pink;">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon (click)="openFirst()">menu</mat-icon>
+    </button>
+    <span>
+      RegistrAPP</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon [routerLink]="['/home']">home</mat-icon>
+    </button>
+  </mat-toolbar>
+
+</ion-header>
+<ion-content [fullscreen]="true">
+
+
+  <div class="body">
+
+    <div class="contenedor1">
+      <div class="usuario">
+        <ion-label class="subtitulo">como funciona</ion-label>
+        <ion-label class="titulo">RegistrAPP </ion-label>
+      </div>
+
+    </div>
+
+    <div class="contenedor2">
+
+      <ion-label class="label">Resuelve tus dudas aqui...</ion-label>
+      <div class="parrafo">
+
+        <mat-card>
+          <ion-label class="label">¿ Qué puede hacer ?</ion-label>
+          <p>
+            Check asist tiene la capacidad de crear un codigo QR, el cual sera creado por tu docente.
+            Este QR tu podras escanearlo y asi poder quedar presente en tu clase de manera mas rapida y efciente
+          </p>
+        </mat-card>
+
+        <mat-card>
+          <ion-label class="label">¿ Qué hacer en caso de problemas ?</ion-label>
+          <p>
+            Pongase en contacto con su docente para que el pueda hablar con los cordinadores de tu carrera y
+            poder solucionar el problema de la forma mas rapida y efectiva posible
+          </p>
+        </mat-card>
+
+        <mat-card>
+          <ion-label class="label">¿Puedo cambiar mi contraseña o usuario?</ion-label>
+          <p>
+            La respuesta es si, la forma de hacerlo es dirigirse a 'configuraciones/seguridad' o en la parte
+            superior isquiquierda presionar las tres rallitas y luego 'modificar usuario'
+            y luego de esto cambiar su contraseña o usuario segun usted requiera
+          </p>
+        </mat-card>
+
+      </div>
+
+      <div class="espacio">
+
+      </div>
+      <div class="espacio2">
+
+      </div>
+
+    </div>
+  </div>
+
+
+</ion-content>

@@ -1,0 +1,135 @@
+.bienvenida{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+  }
+  
+  .menu{
+    width: 45%;
+    color: white;
+    position: absolute;
+    top: 25px;
+    font-weight: 500;
+    font-size: 16px;
+  
+    ion-label{
+      margin-left: 4em;
+      cursor: pointer;
+    }
+  }
+  
+  .texto {
+    position: absolute;
+    top: 150px;
+    left: 50px;
+    width: 45%;
+    color: white;
+    text-align: justify;
+  
+    h5 {
+      font-weight: 700;
+      font-size: 30px;
+    }
+    
+    p {
+      font-weight: 400;
+      font-size: 15px;
+      margin-top: 15px;
+    }
+  
+    .importante {
+      font-size: 15px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      animation: zoom 0.5s;
+      animation-direction: alternate;
+      animation-timing-function: cubic-bezier(.5, 0.05, 1, .5);
+      animation-iteration-count:2;
+      animation-delay: 3s;
+      animation-duration: 1s
+    }
+  }
+  
+  
+  @keyframes zoom {
+    from {
+      transition: 1s ease;
+    }
+    to {
+      transform : scale(1.1);
+    }
+  }
+
+  .tituloCurso{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    margin-bottom: 2em;
+    h1{
+      margin-top: 2em;
+      font-weight: 700;
+      font-size: 30px;
+      width: 60%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .buscador{
+        width: 40%; 
+        margin-right: 5em;
+        transform: translateY(50%);
+    }
+    
+    .buscador ion-searchbar{
+        box-shadow: 1px 1px 1px 1px gray;
+    }
+  }
+
+ .NO{
+    width: 80%;
+    margin: auto;
+ }
+
+ion-card{
+    width: 90%;
+    margin: auto;
+    background: linear-gradient(to left, rgb(0, 120, 255), rgb(0, 47, 255), rgb(40, 0, 255));
+    box-shadow: 1px 1px 2px 2px gray;
+    margin-bottom: 1em;
+    border-bottom-left-radius: 25px;
+}
+
+.curso{
+    background: white;
+    margin-left: 13px;
+    height: 2%;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    border-bottom-left-radius: 25px;
+
+}
+
+.curso .titulo{
+    font-weight: 600;
+    color: gray;
+    font-size: 20px;
+    margin-left: 15px;
+}
+
+.filtro p{
+    font-weight: 500;
+    color: black;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+.filtro .cantidad{
+    font-weight: 400;
+    color: rgb(172, 169, 169);
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+.espacio{
+    height: 100em;
+  }

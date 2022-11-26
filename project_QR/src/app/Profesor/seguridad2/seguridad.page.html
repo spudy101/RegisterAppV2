@@ -1,0 +1,81 @@
+<ion-content [fullscreen]="true">
+
+  <div class="bienbenida">
+    <img src="assets/icon/fotoInicio.png" class="" alt="..." style="width: 100%;">
+    <div class="menu">
+      <ion-label (click)="openMenu()">Menu</ion-label>
+      <ion-label [routerLink]="['/generar-qr']">Ir al Inicio</ion-label>
+      <ion-label [routerLink]="['/login-p']" (click)="salir()">Cerrar Sesion</ion-label>
+    </div>
+    <div class="texto">
+      <h5 class="titulo">
+        Modificar Perfil
+      </h5>
+      <p>
+        En esta seccion podras cambiar tu usuario y contraseña, a la que tu decidad mas conveniente o por el contrario
+        te gusta mas
+      </p>
+      <p class="importante">""IMPORTANTE... No puedes modificar tu correo institucional""</p>
+    </div>
+
+  </div>
+
+  <div class="contenedorT">
+    <div class="texto2">
+      <h5>
+        Perfil de "{{nuevoProfesor.nombre}} {{ nuevoProfesor.apellido }}"
+      </h5>
+    </div>
+
+    <div class="foto">
+      <div class="escudo">
+        <img src="assets\icon\escudo.png" alt="">
+      </div>
+      <div class="mano">
+        <img src="assets\icon\mano.png" alt="">
+      </div>
+    </div>
+
+  </div>
+
+  <div class="contra_actual">
+    <div class="fotousu">
+      <img src="assets\icon\perfil.png" alt="">
+    </div>
+    <ion-label class="titulo">Correo actual: " {{ nuevoProfesor.correo }} "</ion-label>
+    <ion-label class="titulo">Contraseña actual: " {{ nuevoProfesor.contrasena }} "</ion-label>
+    <ion-label class="titulo">usuario actual: " {{ nuevoProfesor.nombre }} {{ nuevoProfesor.apellido }} "</ion-label>
+  </div>
+
+  <div class="cambiar">
+    <div class="cambiar_contra">
+
+      <ion-label class="titulo">Cambiar nombre</ion-label>
+
+      <ion-input type="text" [(ngModel)]="nuevoProfesor.nombre" placeholder="Nuevo nombre"></ion-input>
+
+      <ion-button (click)="Cambiarnombre()" expand="block" fill="clear" shape="round">
+        Guardar
+      </ion-button>
+    </div>
+
+    <div class="cambiar_usuario">
+
+      <ion-label class="titulo">Cambiar apellido</ion-label>
+
+      <ion-input type="text" [(ngModel)]="nuevoProfesor.apellido" placeholder="Nuevo apellido"></ion-input>
+
+      <ion-button (click)="cambiarApellido()" expand="block" fill="clear" shape="round">
+        Guardar
+      </ion-button>
+    </div>
+
+  </div>
+
+
+
+  <div class="espacio">
+
+  </div>
+
+</ion-content>

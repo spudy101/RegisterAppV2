@@ -1,0 +1,71 @@
+<ion-header [translucent]="true" class="ion-no-border">
+
+  <mat-toolbar style="background: rgb(27, 27, 27); color: pink;">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon (click)="openMenu()">menu</mat-icon>
+    </button>
+    <span>
+      RegistrAPP</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon [routerLink]="['/listar-profesores']">home</mat-icon>
+    </button>
+  </mat-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>{{ subtitulo }}</ion-card-subtitle>
+      <ion-card-title>{{ titulo }}</ion-card-title>
+    </ion-card-header>
+
+  </ion-card>
+
+  <ion-card>
+
+    <div class="nombre">
+      <mat-form-field appearance="fill">
+        <mat-label>Nombre</mat-label>
+        <input matInput [(ngModel)]="nuevoProfesor.nombre" placeholder="Escribir nombre" required>
+      </mat-form-field>
+
+
+      <mat-form-field appearance="fill">
+        <mat-label>Apellido</mat-label>
+        <input matInput [(ngModel)]="nuevoProfesor.apellido" placeholder="Escribir apellido" required>
+      </mat-form-field>
+    </div>
+
+    <div class="correo">
+
+      <mat-form-field appearance="fill">
+        <mat-label>Correo electronico</mat-label>
+        <input matInput [(ngModel)]="nuevoProfesor.correo" placeholder="Escribir apellido" required>
+      </mat-form-field>
+    </div>
+
+    <div class="contrasena">
+      <mat-form-field appearance="fill">
+        <mat-label>Contraseña</mat-label>
+        <input matInput [type]="hide ? 'text' : 'password'" [(ngModel)]="nuevoProfesor.contrasena" required>
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+
+    <ion-card-content>
+      <ion-button [routerLink]="['/listar-profesores/']" class="volver">
+        Volver
+      </ion-button>
+
+      <ion-button (click)="agregarEditar()" class="guardar">
+        Guardar
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,102 @@
+<ion-header [translucent]="true" class="ion-no-border">
+
+  <mat-toolbar style="background: rgb(27, 27, 27); color: pink;">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon (click)="openFirst()" >menu</mat-icon>
+    </button>
+    <span>
+      RegistrAPP</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon [routerLink]="['/home']">home</mat-icon>
+    </button>
+  </mat-toolbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <div class="body">
+
+    <div class="contenedor1">
+      <div class="titulo">
+        <ion-label class="nombre">Configuraciones</ion-label>
+      </div>
+    </div>
+
+
+    <div class="contenedor2">
+
+      <ion-label class="label">Seleccione alguna opcion...</ion-label>
+
+      <div class="contenedor_cartas">
+
+        <ion-row>
+          <ion-col>
+            <ion-card (click)="setOpen(true)">
+              <img src="assets\icon\colores.png" alt="">
+              <ion-card-title>
+                Color fondo
+              </ion-card-title>
+            </ion-card>
+            <ion-card [routerLink]="['/ayuda']">
+              <img src="assets\icon\informacion.png" alt="">
+              <ion-card-title>
+                sobre la aplicacion
+              </ion-card-title>
+            </ion-card>
+          </ion-col>
+          <ion-col>
+            <ion-card [routerLink]="['/seguridad']">
+              <img src="assets\icon\proteger.png" alt="">
+              <ion-card-title>
+                Seguridad
+              </ion-card-title>
+            </ion-card>
+            <ion-card [routerLink]="['/home']">
+              <img src="assets\icon\casa.png" alt="">
+              <ion-card-title>
+                Home
+              </ion-card-title>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <div class="espacio">
+
+      </div>
+      <div class="espacio2">
+
+      </div>
+    </div>
+
+    <ion-modal [isOpen]="isModalOpen">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar>
+            <ion-title>Cambiar color de fondo</ion-title>
+            <ion-buttons slot="end">
+              <ion-button (click)="setOpen(false)">Cerrar</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">
+
+          <ion-item>
+            <ion-label>Colores</ion-label>
+            <ion-select value="peperoni" multiple="true" placeholder="Select Pizza">
+              <ion-select-option value="peperoni">Rojo</ion-select-option>
+              <ion-select-option value="hawaii">Azul</ion-select-option>
+              <ion-select-option value="peperoni">Rosado</ion-select-option>
+              <ion-select-option value="hawaii">Verde</ion-select-option>
+              <ion-select-option value="peperoni">Amarillo</ion-select-option>
+              <ion-select-option value="hawaii">morado</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+  </div>
+</ion-content>

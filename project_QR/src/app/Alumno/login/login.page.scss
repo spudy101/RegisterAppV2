@@ -1,0 +1,79 @@
+.body {
+    background: linear-gradient(to right, rgba(211, 11, 168, 0.452), rgb(255, 0, 179));
+}
+
+.contenedor1 {
+    padding: 20px;
+    width: 100%;
+    padding-top: 50px;
+    justify-content: space-between;
+
+}
+
+.contenedor2 {
+    background: white;
+    width: 100%;
+    border-top-right-radius: 50px;
+    padding-top: 40px;
+    text-align: center;
+
+}
+
+ion-item{
+    width: 95%;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.login{
+    box-shadow: 2px 2px 4px 1px rgb(165, 165, 165);
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    width: 90%;
+}
+
+.titulo{
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+
+.registro{
+    width: 60%;
+    box-shadow: 2px 2px 4px 1px rgb(165, 165, 165);
+    border-top-right-radius: 60px;
+    border-bottom-right-radius: 60px;
+    margin-right: 3em;
+    cursor: pointer;
+    height: 50px;
+    text-align: center;
+    padding-top: 10px;
+    font-weight: 800;
+    margin-bottom: 3em;
+    color: orangered;
+}
+
+
+.cosas{
+    display: flex;
+    margin-top: 1em;
+}
+
+
+.correcto{
+    width: 20%;
+    margin-left: 55%;
+    margin-top: 10px;
+    margin-bottom: 4em;
+}
+
+
+.espacio {
+    height: 60px;
+}
+
+.espacio2 {
+    padding: 30%;
+    background: linear-gradient(to right, rgba(211, 11, 168, 0.452), rgb(255, 0, 179));
+}
+

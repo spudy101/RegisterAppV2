@@ -1,0 +1,80 @@
+.bienvenida{
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.menu{
+  width: 45%;
+  color: white;
+  position: absolute;
+  left: 20px;
+  top: 25px;
+  font-weight: 500;
+  font-size: 16px;
+
+  ion-label{
+    margin-left: 2em;
+    cursor: pointer;
+  }
+}
+
+.texto {
+  position: absolute;
+  top: 150px;
+  left: 50px;
+  width: 45%;
+  color: white;
+  text-align: justify;
+
+  .titulo {
+    font-weight: 700;
+    font-size: 30px;
+  }
+  
+  p {
+    font-weight: 400;
+    font-size: 15px;
+    margin-top: 15px;
+  }
+
+  .importante {
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    animation: zoom 0.5s;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.5, 0.05, 1, .5);
+    animation-iteration-count:2;
+    animation-delay: 3s;
+    animation-duration: 1s
+  }
+}
+
+
+@keyframes zoom {
+  from {
+    transition: 1s ease;
+  }
+  to {
+    transform : scale(1.1);
+  }
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+.card-body h5{
+  text-align: center;
+  font-size: 30px;
+}
+
+.iconos {
+  cursor: pointer;
+  margin-left: 1em;
+}
+
+.agregar{
+  margin-top: 1em;
+  width: 100%;
+  height: 40px;
+}

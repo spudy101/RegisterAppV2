@@ -1,0 +1,93 @@
+<ion-content [fullscreen]="true">
+
+  <div class="bienbenida">
+    <img src="assets/icon/fotoInicio.png" class="" alt="..." style="width: 100%;">
+    <div class="menu">
+      <ion-label (click)="openMenu()">Menu</ion-label>
+      <ion-label [routerLink]="['/generar-qr']">Ir al Inicio</ion-label>
+      <ion-label [routerLink]="['/login-p']" (click)="salir()">Cerrar Sesion</ion-label>
+    </div>
+    <div class="texto">
+      <h5 class="titulo">
+        Lista del curso {{ nuevoCurso.titulo }}
+      </h5>
+      <p>
+        En esta seccion podras ver la asistencia de tus alumnos, ademas de guardar o eliminarla si asi correspodiese,
+        tambien puedes modificar la asitencia, ante cualquier situacion adversa
+
+      </p>
+      <p class="importante">""IMPORTANTE... El alumno debe tener sobre el 75% de asistencia para aprobar""</p>
+    </div>
+
+  </div>
+
+  <div class="tituloCurso">
+    <h1>Lista del dia {{ nuevalista.fechaCreacion }}...</h1>
+    <div class="foto">
+      <img src="assets\icon\grupo.png" alt="">
+    </div>
+  </div>
+
+  <div class="borde_tabla">
+    <div class="tabla">
+      <ion-row class="titulo">
+        <ion-col size="12"> Asistencia "{{ nuevoCurso.titulo }} {{ nuevoCurso.nombre }}"</ion-col>
+      </ion-row>
+
+      <ion-row class="cabesera">
+        <ion-col size="1" class="otros">Numero</ion-col>
+        <ion-col size="4" class="otros">Alumno</ion-col>
+        <ion-col size="2" class="otros">Fecha y hora</ion-col>
+        <ion-col size="4" class="otros">Estado</ion-col>
+        <ion-col size="1" class="otros">Asistencia</ion-col>
+      </ion-row>
+
+      <div class="filtro2" *ngFor="let alumno of alumno; index as i;">
+
+        <ion-row class="cuerpo" *ngIf="alumno.cursoP == nuevalista.curso">
+          <ion-col size="1" class="otros">{{ i + 1 }} </ion-col>
+          <ion-col size="4" class="otros">{{ alumno.apellido }} {{ alumno.nombre }}</ion-col>
+          <ion-col size="2" class="otros">{{ nuevalista.fechaCreacion }} {{ nuevalista.horaCreacion }}</ion-col>
+          <ion-col size="4" class="estado">
+            <ion-row>
+              <ion-col size="4">Presente
+              </ion-col>
+              <ion-col size="4">Ausente
+              </ion-col>
+              <ion-col size="4">Justificado
+              </ion-col>
+            </ion-row>
+            <ion-row class="cajas">
+              <ion-col size="4">
+                <ion-checkbox></ion-checkbox>
+              </ion-col>
+              <ion-col size="4">
+                <ion-checkbox></ion-checkbox>
+              </ion-col>
+              <ion-col size="4">
+                <ion-checkbox></ion-checkbox>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+          <ion-col size="1" class="otros">100%</ion-col>
+        </ion-row>
+      </div>
+
+    </div>
+
+    <div class="botones">
+      <ion-button (click)="eliminar()" expand="block" fill="clear" shape="round">
+        Eliminar
+      </ion-button>
+      <ion-button (click)="guardar()" expand="block" fill="clear" shape="round">
+        Guardar
+      </ion-button>
+    </div>
+  </div>
+
+  <div class="espacio">
+
+  </div>
+
+
+</ion-content>

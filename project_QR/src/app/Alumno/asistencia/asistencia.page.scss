@@ -1,0 +1,155 @@
+.body {
+    background: linear-gradient(to right, rgba(211, 11, 168, 0.452), rgb(255, 0, 179));
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+.imagen {
+    float: right;
+    width: 100px;
+    margin-bottom: 1em;
+    z-index: 1;
+    width: 30%;
+}
+
+.contenedor1 {
+    padding: 20px;
+    width: 100%;
+    padding-top: 25px;
+    justify-content: space-between;
+}
+
+.titulo {
+    font-size: 20px;
+    color: white;
+    font-weight: 600;
+}
+
+.parrafo {
+    font-size: 15px;
+    color: white;
+    font-weight: 400;
+    display: block;
+    margin-top: 5px;
+}
+
+.contenedor2 {
+    background: white;
+    width: 100%;
+    border-top-right-radius: 50px;
+    padding-top: 20px;
+    text-align: center;
+
+}
+
+.contenedor2 .label{
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+.tabla {
+    width: 90%;
+    margin: auto;
+    margin-top: 1em;
+    box-shadow: 0px 10px 10px 5px rgb(83, 82, 82);
+    border-top-right-radius: 25px;
+    padding: 3px;
+
+
+
+}
+
+.tabla .titulo {
+    background: rgb(17, 17, 190);
+    border-top-right-radius: 25px;
+
+}
+
+.titulo ion-col {
+    height: 70px;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 800;
+    font-size: 20px;
+    position: left;
+}
+
+.cabesera {
+    border-bottom: dotted black 1px;
+}
+
+.cabesera ion-col {
+    height: 40px;
+    color: black;
+    text-align: center;
+    margin-top: 12px;
+    font-weight: 600;
+}
+
+.cuerpo:active .materia {
+    display: block;
+
+}
+
+.desplegable {
+    cursor: pointer;
+}
+
+.materia {
+    display: none;
+    color: gray;
+    font-size: 12px;
+    font-weight: 500;
+    height: 30px;
+    border-bottom: dotted rgb(156, 156, 156) 1px;
+    padding-top: 8px;
+    
+}
+
+.info{
+    width: 100%;
+}
+
+
+.cuerpo{
+    width: 100%;
+}
+
+.cuerpo .desplegable {
+    color: black;
+    height: 60px;
+    border-bottom: solid rgb(156, 156, 156) 1px;
+    padding-top: 10px;
+
+    .id {
+        margin-top: 20px;
+        font-weight: 500;
+        font-size: 15px;
+    }
+
+    p {
+        margin-top: 23px;
+        font-weight: 600;
+        margin-top: 5px;
+        transform: translateY(-30%);
+    }
+
+    .porcentaje {
+        font-size: 20px;
+    }
+}
+
+.espacio {
+    height: 60px;
+}
+
+.espacio2 {
+    padding: 30%;
+    background: linear-gradient(to right, rgba(211, 11, 168, 0.452), rgb(255, 0, 179));
+}

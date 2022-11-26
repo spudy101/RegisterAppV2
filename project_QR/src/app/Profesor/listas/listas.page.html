@@ -1,0 +1,58 @@
+
+
+<ion-content [fullscreen]="true">
+
+  <div class="bienbenida">
+    <img src="assets/icon/fotoInicio.png" class="" alt="..." style="width: 100%;">
+    <div class="menu">
+      <ion-label (click)="openMenu()">Menu</ion-label>
+      <ion-label [routerLink]="['/generar-qr']">Ir al Inicio</ion-label>
+      <ion-label [routerLink]="['/login-p']" (click)="salir()">Cerrar Sesion</ion-label>
+    </div>
+    <div class="texto">
+      <h5 class="titulo">
+        Listas del curso {{ nuevoCurso.titulo }}
+      </h5>
+      <p>
+        En esta seccion podras ver todos las listas
+        del curso que hayas seleccionado y podras modificarla a gusto, siempre y cunado sigas las reglas establecidad,
+        por tu sede
+
+      </p>
+      <p class="importante">""IMPORTANTE... Para modificar una lista debe mandar un correo a cordinacion""</p>
+    </div>
+
+  </div>
+
+  <div class="tituloCurso">
+    <h1>Listado de Listas...</h1>
+    <div class="buscador">
+      <ion-searchbar value=""></ion-searchbar>
+    </div>
+  </div>
+
+  <div class="NO" *ngIf="uid == null">
+    <h1>No Estas registrado, registrate...</h1>
+  </div>
+
+  <div class="filtro" *ngFor="let lista of lista">
+    <ion-card [routerLink]="['/alumnos2/', lista.id]" *ngIf="lista.curso == uid">
+
+      <div class="curso">
+
+        <ion-label class="titulo">lista del curso: {{ nuevoCurso.titulo }}</ion-label>
+        <p>fecha de creacion: {{ lista.fechaCreacion }} {{ lista.horaCreacion }}</p>
+        <p>fecha de modificacion: {{ lista.fechaActualizacion }} {{ lista.horaActualizacion }}</p>
+
+      </div>
+
+    </ion-card>
+  </div>
+
+
+  <div class="espacio">
+
+  </div>
+
+
+</ion-content>

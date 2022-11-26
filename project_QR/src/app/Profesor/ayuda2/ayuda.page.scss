@@ -1,0 +1,121 @@
+.bienvenida{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+  }
+  
+  .menu{
+    width: 45%;
+    color: white;
+    position: absolute;
+    top: 25px;
+    font-weight: 500;
+    font-size: 16px;
+  
+    ion-label{
+      margin-left: 4em;
+      cursor: pointer;
+    }
+  }
+  
+  .texto {
+    position: absolute;
+    top: 150px;
+    left: 50px;
+    width: 45%;
+    color: white;
+    text-align: justify;
+  
+    h5 {
+      font-weight: 700;
+      font-size: 30px;
+    }
+    
+    p {
+      font-weight: 400;
+      font-size: 15px;
+      margin-top: 15px;
+    }
+  
+    .importante {
+      font-size: 15px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      animation: zoom 0.5s;
+      animation-direction: alternate;
+      animation-timing-function: cubic-bezier(.5, 0.05, 1, .5);
+      animation-iteration-count:2;
+      animation-delay: 3s;
+      animation-duration: 1s
+    }
+  }
+  
+  
+  @keyframes zoom {
+    from {
+      transition: 1s ease;
+    }
+    to {
+      transform : scale(1.1);
+    }
+  }
+  
+.tituloAyuda{
+    width: 90%;
+    margin: auto;
+    display: flex;
+
+    .foto img{
+        width: 45%;
+        margin-top: 3em;
+    }
+    h1{
+        width: 70%;
+        margin-top: 3em;
+        font-weight: 600;
+        font-size: 35px;
+        color: black;
+    }
+}
+
+.contenedor {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    margin-top: 2em;
+}
+
+.isquierda {
+    width: 33%;
+
+}
+
+.medio {
+    width: 33%;
+    margin-left: 5em;
+
+}
+
+.derecha {
+    width: 33%;
+    margin-left: 5em;
+
+}
+
+.contenedor h5 {
+    font-weight: 500;
+    font-size: 35px;
+    color: black;
+    margin: auto;
+}
+
+.contenedor p {
+    font-weight: 400;
+    font-size: 18px;
+    color: black;
+    width: 90%;
+    margin-top: 1em;
+}
+
+.espacio{
+    height: 3em;
+  }

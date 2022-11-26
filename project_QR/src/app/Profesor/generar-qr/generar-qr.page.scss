@@ -1,0 +1,141 @@
+
+.bienvenida{
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.menu{
+  width: 45%;
+  color: white;
+  position: absolute;
+  top: 25px;
+  font-weight: 500;
+  font-size: 16px;
+
+  ion-label{
+    margin-left: 4em;
+    cursor: pointer;
+  }
+}
+
+.texto {
+  position: absolute;
+  top: 150px;
+  left: 50px;
+  width: 45%;
+  color: white;
+  text-align: justify;
+
+  h5 {
+    font-weight: 700;
+    font-size: 30px;
+  }
+  
+  p {
+    font-weight: 400;
+    font-size: 15px;
+    margin-top: 15px;
+  }
+
+  .importante {
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    animation: zoom 0.5s;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.5, 0.05, 1, .5);
+    animation-iteration-count:2;
+    animation-delay: 3s;
+    animation-duration: 1s
+  }
+}
+
+
+@keyframes zoom {
+  from {
+    transition: 1s ease;
+  }
+  to {
+    transform : scale(1.1);
+  }
+}
+
+.tituloQR{
+  width: 80%;
+  margin: auto;
+  h1{
+    margin-top: 2em;
+    font-weight: 700;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+}
+
+.confirmar{
+  display: flex;
+  width: 70%;
+  margin: auto;
+
+}
+
+.seleccion{
+  display: flex;
+  display: inline-block;
+  width: 50%;
+  margin-top: 2em;
+
+  .cursos{
+    width: 80%;
+  }
+
+  p{
+    font-weight: 500;
+    color: black;
+  }
+}
+
+
+.botones{
+  width: 50%;
+  margin-top: 28px;
+
+  .boton {
+    box-shadow: 1px 1px 1px 1px grey;
+    width: 100%;
+    font-weight: 500;
+    font-size: 80%;
+    color: white;
+    background:rgb(0, 120, 255) ;
+    //background: linear-gradient(to right, rgb(0, 120, 255), rgb(0, 47, 255), rgb(40, 0, 255));
+    height: 50px;
+    border-radius: 25px;
+  }
+}
+
+
+.generar_qr{
+  width: 80%;
+  margin: auto;
+  margin-top: 2em;
+
+  h5{
+    text-align: center;
+    font-weight: 800;
+    font-size: 35px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .QR {
+    width: 100%;
+    text-align: center;
+    margin-top: 1em;
+  }
+  
+}
+
+
+.espacio{
+  height: 3em;
+}
+
+

@@ -1,0 +1,38 @@
+
+
+  ion-card{
+    width: 60%;
+    margin: auto;
+    margin-top: 1em;
+  }
+
+  .nombre{
+    display: flex;
+
+    mat-form-field{
+        width: 45%;
+        margin: auto;
+        margin-top: 2em;
+    }
+  }
+
+  .profesor{
+    width: 95%;
+    margin: auto;
+    
+    mat-form-field{
+        width: 40%;
+
+    }
+
+  }
+
+
+  .guardar{
+    float: right;
+    margin-right: 3em;
+  }
+
+  .volver{
+    margin-left: 3em;
+  }

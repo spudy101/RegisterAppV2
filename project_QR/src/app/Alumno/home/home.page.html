@@ -1,0 +1,84 @@
+<ion-header [translucent]="true" class="ion-no-border">
+
+  <mat-toolbar style="background: rgb(27, 27, 27); color: pink;">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon (click)="openFirst()" >menu</mat-icon>
+    </button>
+    <span>
+      RegistrAPP</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon [routerLink]="['/ayuda']">info</mat-icon>
+    </button>
+  </mat-toolbar>
+
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="body">
+
+    <div class="contenedor1">
+
+      <div class="usuario">
+        <ion-label class="Bienvenido">Bienvenido...</ion-label>
+        <ion-label class="nombre">{{ nuevolumno.nombre }} {{ nuevolumno.apellido }}</ion-label>
+      </div>
+
+    </div>
+
+    <div class="contenedor2">
+      <ion-label class="label">Seleccione alguna opcion...</ion-label>
+
+      <div class="contenedor_cartas">
+        <ion-row>
+          <ion-col>
+
+            <ion-card (click)="scan()">
+              <img src="assets\icon\escanear_qr.png" alt="">
+              <ion-card-title>
+                Escanear QR
+              </ion-card-title>
+            </ion-card>
+
+            <ion-card [routerLink]="['/asistencia']">
+              <img src="assets\icon\narracion.png" alt="">
+              <ion-card-title>
+                Asistencia
+              </ion-card-title>
+            </ion-card>
+
+          </ion-col>
+
+
+          <ion-col>
+
+            <ion-card [routerLink]="['/horario']">
+              <img src="assets\icon\calendario.png" alt="">
+              <ion-card-title>
+                Horario
+              </ion-card-title>
+            </ion-card>
+
+            <ion-card [routerLink]="['/configuraciones']">
+              <img src="assets\icon\engranajes.png" alt="">
+              <ion-card-title>
+                Configuraciones
+              </ion-card-title>
+            </ion-card>
+
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <div class="espacio">
+
+      </div>
+      <div class="espacio2">
+
+      </div>
+    </div>
+
+  </div>
+
+</ion-content>

@@ -1,0 +1,54 @@
+<ion-content [fullscreen]="true">
+
+  <div class="bienbenida">
+    <img src="assets/icon/fotoInicio.png" class="" alt="..." style="width: 100%;">
+    <div class="menu">
+      <ion-label (click)="openMenu()">Menu</ion-label>
+      <ion-label [routerLink]="['/generar-qr']">Ir al Inicio</ion-label>
+      <ion-label [routerLink]="['/login-p']" (click)="salir()">Cerrar Sesion</ion-label>
+    </div>
+    <div class="texto">
+      <h5 class="titulo">
+        Tus cursos 
+      </h5>
+      <p>
+        En esta seccion podras ver todos tus cursos,
+        ademas al ir a uno de ellos podras ver sus respectivas listas, 
+        si es que tuviesen una y modificarla si es que esto fuese necesario.
+      </p>
+      <p class="importante">""IMPORTANTE... Un profesor no puede tener mas de 5 cursos a cargo""</p>
+    </div>
+
+  </div>
+
+  <div class="tituloCurso">
+    <h1>Listado de cursos...</h1>
+    <div class="buscador">
+      <ion-searchbar value=""></ion-searchbar>
+    </div>
+  </div>
+
+  <div class="NO" *ngIf="uid == null">
+    <h1>No Estas registrado, registrate...</h1>
+  </div>
+
+  <div class="filtro" *ngFor="let curso of curso;index as i;">
+    <ion-card [routerLink]="['/listas/', curso.id]" *ngIf="curso.profesorCargo == uid">
+
+      <div class="curso">
+
+        <ion-label class="titulo">{{ curso.titulo }}</ion-label>
+        <p>siglas del curso: {{ curso.nombre }}</p>
+        <ion-label class="cantidad">cantidad de alumnos:{{ i }}</ion-label>
+      </div>
+
+    </ion-card>
+  </div>
+
+
+  <div class="espacio">
+
+  </div>
+
+
+</ion-content>

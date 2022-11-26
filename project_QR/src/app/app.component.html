@@ -1,0 +1,41 @@
+<ion-app>
+  <ion-menu side="start" menuId="first" contentId="main" class="menu1">
+    <ion-header>
+      <ion-toolbar color="secondary">
+        <ion-title>RegistrAPP</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <div class="foto">
+          <img src="assets\icon\manosinfondo.ico" alt="">
+        </div>
+        <ion-item [routerLink]="['/login']" (click)="salir()">Cerrar Sesion</ion-item>
+        <ion-item [routerLink]="['/seguridad']">Perfil</ion-item>
+        <ion-item [routerLink]="['/ayuda']">¿Qué es RegistrAPP?</ion-item>
+        <ion-item [routerLink]="['/home']">Volver al home</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-menu side="start" menuId="second" contentId="main" class="menu2">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>RegistrAPP</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item [routerLink]="['/login-p']" (click)="salir()">Cerrar Sesion</ion-item>
+        <ion-item [routerLink]="['/generar-qr']">Home</ion-item>
+        <ion-item [routerLink]="['/cursos']">Cursos</ion-item>
+        <ion-item [routerLink]="['/seguridad2']">Seguridad</ion-item>
+        <ion-item [routerLink]="['/ayuda2']">Ayuda</ion-item>
+        <ion-item [routerLink]="['/http-conexion']">api</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  
+  <ion-router-outlet id="main"></ion-router-outlet>
+
+</ion-app>
